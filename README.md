@@ -13,7 +13,7 @@ In the Kinvey console click "Add an App", enter the name "TestDrive-java" when p
 6. Download the latest Kinvey library (zip) and extract the downloaded zip file, from: http://devcenter.kinvey.com/java/downloads
 7. Right click on your project &rarr; **Build Path &rarr; Configure Build Path** and on the **Libraries** tab click **Add External Jars**.  Navigate to where you downloaded the Kinvey Jars and add them all. 
 8. In Eclipse, right click the project &rarr; **Close Project** &rarr; right click project (again) &rarr; **Open Project**. 
-9. Specify your app key and secret in `HelloWorld` constant variables
+9. Specify your app key and master secret in `HelloWorld` constant variables
 **appKey** and **appSecret**
 
 Take a look at our [Getting Started](http://devcenter.kinvey.com/java/guides/getting-started) guide for more information.
@@ -22,7 +22,7 @@ Take a look at our [Getting Started](http://devcenter.kinvey.com/java/guides/get
 public class HelloWorld {
 
     public static final String appKey = "my_app_key";   
-    public static final String appSecret = "my_app_secret";  
+    public static final String mastersecret = "my_master_secret";  
 	
 ```
 

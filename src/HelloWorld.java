@@ -28,18 +28,18 @@ import java.io.*;
 public class HelloWorld {
 
     public static final String appKey = "my_app_key";   
-    public static final String appSecret = "my_app_secret";  
+    public static final String mastersecret = "my_master_secret";  
 
     public static void main(String[] args){
         System.out.println("Hello World");
 
-        Client myJavaClient = new Client.Builder(appKey, appSecret).build();
+        Client myJavaClient = new Client.Builder(appKey, mastersecret).build();
         myJavaClient.enableDebugLogging();
         Boolean ping = myJavaClient.ping();
         System.out.println("Client ping -> " + ping);
 
         try {
-            myJavaClient.user().loginBlocking(appKey, appSecret).execute();
+            myJavaClient.user().loginBlocking(appKey, mastersecret).execute();
             System.out.println("Client login -> " + myJavaClient.user().isUserLoggedIn());
         } catch (IOException e) {
             System.out.println("Couldn't login -> " + e);
